@@ -38,6 +38,11 @@ import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 import python from './logo/python.png'
 import jupyter_notebook from './logo/jupyter_notebook.png'
 import flask from './logo/flask.png'
+import react from './logo/react.png'
+import mysql from './logo/mysql.png'
+import tf from './logo/tf.png'
+import company from './company.png'
+import adept from './adept.png'
 
 export const assets = {
     user_image,
@@ -79,19 +84,24 @@ export const assets = {
     right_arrow_bold_dark,
     python,
     jupyter_notebook,
-    flask
+    flask,
+    react,
+    mysql,
+    tf,
+    company,
+    adept
 };
 
 export const workData = [
     {
         title: 'AI Mouse Control',
-        description: 'Virtual Mouse with Hand Gestures',
+        description: 'Gesture Control',
         bgImage: '/work-1.png',
         link:'https://github.com/srinivasanr11/AI-Mouse-Control-System'
     },
     {
         title: 'Covid-19',
-        description: 'Predictive Models Using Bayesian Networks',
+        description: 'Predictive Models',
         bgImage: '/work-2.png',
         link:'https://github.com/srinivasanr11/COVID-19-Data-Analysis'
     },
@@ -103,7 +113,7 @@ export const workData = [
     },
     {
         title: 'Vision-SoC',
-        description: 'AI Super-Resolution with ESRGAN',
+        description: 'AI Super-Resolution',
         bgImage: '/work-4.png',
         link:'https://github.com/srinivasanr11/Vision-SoC'
     },
@@ -117,11 +127,32 @@ export const serviceData = [
 ]
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'Python, Java Script, SQL TensorFlow, OpenCV  Pytorch, Sk-Learn' },
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Languages', description: 'Python, Java Script, SQL Related Frameworks' },
     { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech Artificial Intelligence and Data Science' },
-    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 10 projects' }
+    { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 15+ projects' }
 ];
 
 export const toolsData = [
-    assets.python, assets.jupyter_notebook, assets.vscode, assets.flask, assets.git
+    assets.python, assets.jupyter_notebook, assets.react, assets.flask, assets.tf, assets.git
 ];
+
+
+export const experience = [
+    {
+      icon: assets.company,
+      title: 'Pricol Ltd - Automotive Industry',
+      Role: 'Deep Learning Intern',
+      duration: '3 Months',
+      description:
+        "Developed a CNN-based model using OpenCV and Keras for telltale sign detection in instrument cluster images. Implemented preprocessing and anomaly detection for brightness, color, segment cutoffs, and scratches, achieving 90–95% accuracy.",
+    },
+    {
+      icon: assets.adept,
+      title: 'ADEPT Association',
+      Role: 'Coding Club Coordinator',
+      duration: '1 Year',
+      description:
+        "Led coding sessions, workshops, and initiatives to foster collaboration, enhance technical skills, and support continuous learning within the club.",
+    },
+  ];
+  
