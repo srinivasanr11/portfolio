@@ -3,27 +3,20 @@
 import { experience } from '@/assets';
 import Image from 'next/image';
 import React from 'react';
-import { motion } from 'framer-motion';
 
 const Experience = () => {
   return (
-    <motion.section
+    <section
       id="experience"
       aria-labelledby="experience-heading"
       className="w-full px-[10%] py-10 scroll-mt-20 sm:px-6"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
     >
-      <motion.h2
+      <h2
         id="experience-heading"
         className="text-center text-3xl sm:text-4xl font-ovo"
-        initial={{ y: -20, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.5 }}
       >
         My Experience
-      </motion.h2>
+      </h2>
 
       <div className="relative mt-16 max-w-6xl mx-auto">
         {/* Vertical timeline line */}
@@ -33,19 +26,15 @@ const Experience = () => {
           {experience.map(({ icon, title, description, Role, duration }, index) => {
             const isLeft = index % 2 === 0;
             return (
-              <motion.article
+              <article
                 key={index}
                 className={`relative w-full flex flex-col sm:flex-row ${
                   isLeft ? 'sm:justify-start' : 'sm:justify-end'
                 }`}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
                 aria-label={`${title} experience`}
               >
                 <div className="w-full sm:w-1/2 px-4 sm:px-6">
-                <div className="bg-white dark:bg-darkTheme border-2 border-gray-300 dark:border-white p-6 rounded-xl shadow-lg relative z-10 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:shadow-white dark:hover:bg-darkHover/50">
-
+                  <div className="bg-white dark:bg-darkTheme border-2 border-gray-300 dark:border-white p-6 rounded-xl shadow-lg relative z-10 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:shadow-white dark:hover:bg-darkHover/50">
                     <header className="flex items-center gap-4 mb-3">
                       <div className="w-10 h-10 sm:w-8 sm:h-8 rounded-full bg-gray-100 flex items-center justify-center">
                         <Image
@@ -74,12 +63,12 @@ const Experience = () => {
                     </p>
                   </div>
                 </div>
-              </motion.article>
+              </article>
             );
           })}
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

@@ -31,7 +31,7 @@ const Header = () => {
         className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-ovo'
       >
         Hi! I&apos;m Srinivasan R
-        <Image src={assets.hand_icon} alt='Waving hand emoji' className='w-6' />
+        <Image src={assets.hand_icon} alt='Waving hand emoji' className='w-6 mb-[2px]' />
       </motion.h3>
 
       {/* Main Heading (h1 is important for SEO) */}
