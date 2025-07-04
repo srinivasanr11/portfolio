@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { assets } from '@/assets';
 import { motion } from "motion/react";
-
+import { Typewriter } from 'react-simple-typewriter';
 const Header = () => {
   return (
     <header
@@ -18,7 +18,7 @@ const Header = () => {
         <Image
           src={assets.profile_img}
           alt='Portrait of Srinivasan R'
-          className='rounded-full w-32'
+          className="rounded-full w-[120px] sm:w-[140px] md:w-[200px]"
           priority
         />
       </motion.div>
@@ -36,13 +36,23 @@ const Header = () => {
 
       {/* Main Heading (h1 is important for SEO) */}
       <motion.h1
-        initial={{ y: -30, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.5 }}
-        className='text-3xl sm:text-6xl lg:text-[50px] font-ovo'
-      >
-        AI/ML Developer
-      </motion.h1>
+      initial={{ y: -30, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8, delay: 0.5 }}
+      className='text-3xl sm:text-4xl lg:text-[40px] text-center '
+    >AI & ML <span>
+        <Typewriter
+          className = 'font-ovo'
+          words={['Developer', 'Engineer']}
+          loop={0} // 0 = infinite
+          cursor
+          cursorStyle='|'
+          typeSpeed={80}
+          deleteSpeed={50}
+          delaySpeed={1500}
+        />
+      </span>
+    </motion.h1>
 
       {/* Description */}
       <motion.p
@@ -63,7 +73,7 @@ const Header = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 1 }}
           href='#contact'
-          className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'
+          className='px-8 py-2 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'
           aria-label="Contact Srinivasan R"
         >
           Contact Me
@@ -77,7 +87,7 @@ const Header = () => {
           transition={{ duration: 0.6, delay: 1.2 }}
           href='/resume.pdf'
           download
-          className='px-10 py-3 border border-gray-500 rounded-full flex items-center gap-2 bg-white dark:text-black'
+          className='px-8 py-2 border border-gray-500 rounded-full flex items-center gap-2 bg-white dark:text-black'
           aria-label="Download Srinivasan R's resume"
         >
           My Resume

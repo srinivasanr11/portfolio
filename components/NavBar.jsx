@@ -35,7 +35,7 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
 
       {/* Navigation */}
       <nav
-        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 transition-all duration-300 ${
+        className={`w-full fixed px-3 lg:px-4 xl:px-[4%] py-2 flex items-center justify-between z-50 transition-all duration-300 ${
           isScroll ? "backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20" : ""
         }`}
         role="navigation"
@@ -46,13 +46,13 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
           <Image
             src={isDarkMode ? assets.logo_dark : assets.logo}
             alt="Developer Logo"
-            className="w-28 cursor-pointer mr-14"
+            className="w-[100px] cursor-pointer mr-8"
           />
         </a>
 
         {/* Desktop Navigation Menu */}
         <ul
-          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
+          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-6 py-2 ${
             isScroll ? "" : "bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent"
           }`}
         >
@@ -81,7 +81,7 @@ const NavBar = ({ isDarkMode, setIsDarkMode }) => {
           {/* Contact Button (Desktop Only) */}
           <a
             href="#contact"
-            className="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-ovo dark:border-white/50"
+            className="hidden lg:flex items-center gap-3 px-8 py-3 text-sm border border-gray-500 rounded-full ml-4 font-ovo dark:border-white/50"
             aria-label="Contact Me"
           >
             Contact
