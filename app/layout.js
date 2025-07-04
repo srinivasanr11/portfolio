@@ -12,9 +12,9 @@ const ovo = Ovo({
 });
 
 export const metadata = {
-  title: 'Srinivasan | Personal Portfolio',
+  title: 'Srinivasan | Portfolio',
   description: 'Personal Portfolio of Srinivasan',
-  icons: '/logo.png',
+  icons: '/logo.ico',
 };
 
 export default function RootLayout({ children }) {
